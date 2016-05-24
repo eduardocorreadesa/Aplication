@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <title>TACpixeon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="google-signin-client_id" content="810124521397-i1njbuu6g19bvka8rf7d74mkj759guq4.apps.googleusercontent.com">
+	
+	<link rel="icon" type="image/png" href="app/src/images/favicon.ico">
+    <link rel="stylesheet" href="bower_components/bootswatch/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app/src/css/site.css">
+</head>
+<body>
+
+<div ng-include="'app/views/header.html'" ng-show="isAuthenticated"></div>
+
+<div class="container">
+    <div ng-view ></div>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="app/src/js/gapi-platform.min.js" ></script>
+
+<script src="app/app.js"></script>
+<script src="app/routes.js"></script>
+<script src="app/config.js"></script>
+
+<script src="app/directives/googleSignInButton-directive.js"></script>
+<script src="app/directives/timerProgress-directive.js"></script>
+
+<script src="app/factories/analiseCombinatoria-factory.js"></script>
+
+<script src="app/controllers/home/index-controller.js"></script>
+<script src="app/controllers/authentication/authentication-controller.js"></script>
+
+</body>
+</html>

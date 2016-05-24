@@ -1,0 +1,38 @@
+<div ng-controller="IndexController">
+
+    <div class="well">
+        <h2>Dados do usuário</h2>
+        <h4> <b>Nome:</b> {{ currentUser.name }}</h4>
+        <h4> <b>Email:</b> {{ currentUser.email }}</h4>
+    </div>
+    
+    <div class="col-md-6 well panel-default">
+        <h2>Dados para análise</h2>
+        <form name="mainForm">
+    
+            <div class="form-group col-md-6" ng-class="{ 'has-error' : mainForm.text.$invalid && !mainForm.text.$pristine }">
+                <label for="text">Texto</label>
+                <input type="text" class="form-control" name="text" id="text" ng-model="vm.modelProblemaCombinacao.text" required />
+                <p ng-show="mainForm.text.$error.required && !mainForm.text.$pristine" class="help-block">Campo obrigatório.</p>
+            </div>
+            
+            <div class="form-group col-md-6" ng-class="{ 'has-error' : mainForm.number.$invalid && !mainForm.number.$pristine }">
+                <label for="number">Número</label>
+                <input type="number" class="form-control" name="number" id="number" ng-model="vm.modelProblemaCombinacao.number" required />
+                <p ng-show="mainForm.number.$error.required && !mainForm.number.$pristine" class="help-block">Campo obrigatório.</p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary" ng-click="vm.processar(vm.modelProblemaCombinacao)" ng-disabled="mainForm.$invalid">Processar</button>
+            </div>        
+        </form>
+    </div>
+    
+    <div class="col-md-6 well panel-default">
+        <h2>Resultado análise</h2>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="item in vm.listResultadoCombinacao track by $index">{{item}}</li>
+		</ul>        
+    </div>
+</div>
+<timer-progress class="timerProgress"></timer-progress>

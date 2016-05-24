@@ -1,0 +1,28 @@
+{
+  "name": "TACpixeon",
+  "authors": [
+    "Thiago Cordeiro <thiagocordeirooo@gmail.com>"
+  ],
+  "description": "Projeto de teste para vaga Desenvolvedor WEB",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "angular": "1.5.5",
+    "angular-route": "1.5.5",
+    "bootswatch": "3.3.6",    
+    "jasmine-core": "^2.4.1",
+    "angular-mocks": "^1.5.5"
+  }
+}

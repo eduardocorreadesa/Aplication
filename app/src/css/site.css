@@ -1,0 +1,40 @@
+/*tela de login*/
+.divLogin {
+  margin-top:10%;
+  padding: 50px 20px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.user-anonymous-photo {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto 10px auto;
+}
+
+.user-name {
+	color: #0066AA;
+	font-weight: bold;
+}
+/*fim tela de login*/
+
+/*diretiva timerProgeress*/
+.timerProgress{
+	top: 0;
+	left:48%;
+	position:absolute;
+	font-size: 18pt;
+	color: black;
+	text-align: center;
+	font-weight: bold;
+}
+/*fim diretiva timerProgeress*/
+
+.current-user-photo{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+}
